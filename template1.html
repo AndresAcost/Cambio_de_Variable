@@ -1,0 +1,91 @@
+<div id="resultado"><span style="color:blue;">Solución paso a paso:<br></span><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td> F<sub>n</sub> </td>
+                <td>= </td>
+                <td>{{A}} </td>
+                <td>{{B}} F<sub>n/2</sub> </td>
+            </tr>
+        </tbody>
+    </table><br>Considerando que: n= 2<sup>i</sup><br><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td> F<sub>2^i</sub> </td>
+                <td>= </td>
+                <td>{{A}} </td>
+                <td>{{B}} F<sub>2^(i-1)</sub> </td>
+            </tr>
+        </tbody>
+    </table><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td>1 F<sub>2^i</sub> </td>
+                <td>-{{B}} F<sub>2^(i-1)</sub> </td>
+                <td>= </td>
+                <td>({{A}}) </td>
+            </tr>
+        </tbody>
+    </table>Cambiando los subindices en función i, tenemos<br><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td>1 F<sub>i</sub> </td>
+                <td>-{{B}} F<sub>i-1</sub> </td>
+                <td>= </td>
+                <td>({{A}}) </td>
+            </tr>
+        </tbody>
+    </table>Reemplazando i por i-1, y multiplicando por (-1) tenemos:<br><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td>-1 F<sub>i-1</sub> </td>
+                <td>{{B}} F<sub>i-2</sub> </td>
+                <td>= </td>
+                <td>(-{{A}}) </td>
+            </tr>
+        </tbody>
+    </table>Sumando la ecuaciones se convierte en homogenea:<br><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td> F<sub>i</sub> </td>
+                <td>-{{A}} F<sub>i-1</sub> </td>
+                <td>{{B}} F<sub>i-2</sub> </td>
+                <td>= </td>
+                <td>0 </td>
+            </tr>
+        </tbody>
+    </table>Las dos raices son (9, 1):<br>La solución General es:<br>F(i)= C1 * 9<sup>i</sup> + C2 * 1<sup>i</sup><br>Reemplazando i por lg(n), tenemos:<br><span style="color:blue;">F(n)= C1 * 9<sup>lg(n)</sup> + C2 * 1<sup>lg(n)</sup></span><br>Las condiciones
+    iniciales se calculan con:<br><br>
+    <table border="1" bordercolor="blue">
+        <tbody>
+            <tr>
+                <td> F<sub>n</sub> </td>
+                <td>= </td>
+                <td>{{A}} </td>
+                <td>{{B}} F<sub>n/2</sub> </td>
+            </tr>
+        </tbody>
+    </table>F(1) = 1<br>F(2) = 19<br>Con lo cual las ecuaciones para calcular C1 y C2 son:<br>C1 * 1<sup>lg(9)</sup>+ C2 * 1<sup>lg(1)</sup> = 1<br>C1 * 2<sup>lg(9)</sup>+ C2 * 2<sup>lg(1)</sup> = 19<br><br>C1 * 1 + C2 * 1 = 1<br>C1 * 9 + C2 * 1 = 19<br>Calculando,
+    queda así:
+    <table border="1" width="200">
+        <caption>Matriz para Gauss</caption>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>1</td>
+                <td>19</td>
+            </tr>
+        </tbody>
+    </table>Donde C1 y C2 tienen los siguientes valores:<br>C1=2.25<br>C2=-1.25<br>Con lo cual la solución es:<br>
+    <div style="width:500;border-color:black;color:blue;border-style:solid;border-width:2;">F(n)= 2.25 * n<sup>3.17</sup> -1.25 </div><br><br>
+</div>

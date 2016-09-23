@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>CAMBIO DE VARIABLE</title>
+    </head>
+
+<body>
+<p>
+<label for="A">A </label>
+<input type="A" name="A" id="A">
+<br/> <br/>
+<label for="B">B</label>
+<input type="Number" name="B" id="B">
+<br/> <br/>
+<input type="button" name="funcion1" id="funcion1" value="F_n = A + B * F_(n/2)" onclick="calcularFuncion1()">
+<br/> <br/>
+<input type="button" name="funcion2" id="funcion2" value="F_n = n^A +B*F_(n/2)">
+<br/> <br/>
+<input type="reset">
+<div id="muestraproceso"></div>
+
+</p>
+<script src="script.js"></script>
+<script src="raices.lib.js"></script>
+</body>
+</html>
