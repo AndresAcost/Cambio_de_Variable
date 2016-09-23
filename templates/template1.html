@@ -59,8 +59,12 @@
                 <td>0 </td>
             </tr>
         </tbody>
-    </table>Las dos raices son (9, 1):<br>La solución General es:<br>F(i)= C1 * 9<sup>i</sup> + C2 * 1<sup>i</sup><br>Reemplazando i por lg(n), tenemos:<br><span style="color:blue;">F(n)= C1 * 9<sup>lg(n)</sup> + C2 * 1<sup>lg(n)</sup></span><br>Las condiciones
-    iniciales se calculan con:<br><br>
+    </table>
+    Las dos raices son ({{raiz1}}, {{raiz2}}):<br>
+    La solución General es:<br>F(i)= C1 * {{raiz1}}<sup>i</sup> + C2 * {{raiz2}}<sup>i</sup><br>
+    Reemplazando i por lg(n), tenemos:<br>
+    <span style="color:blue;">F(n)= C1 * {{raiz1}}<sup>lg(n)</sup> + C2 * {{raiz2}}<sup>lg(n)</sup></span><br>
+    Las condiciones iniciales se calculan con:<br><br>
     <table border="1" bordercolor="blue">
         <tbody>
             <tr>
@@ -70,8 +74,12 @@
                 <td>{{B}} F<sub>n/2</sub> </td>
             </tr>
         </tbody>
-    </table>F(1) = 1<br>F(2) = 19<br>Con lo cual las ecuaciones para calcular C1 y C2 son:<br>C1 * 1<sup>lg(9)</sup>+ C2 * 1<sup>lg(1)</sup> = 1<br>C1 * 2<sup>lg(9)</sup>+ C2 * 2<sup>lg(1)</sup> = 19<br><br>C1 * 1 + C2 * 1 = 1<br>C1 * 9 + C2 * 1 = 19<br>Calculando,
-    queda así:
+    </table>
+    F(1) = 1<br>F(2) = 19<br>
+    Con lo cual las ecuaciones para calcular C1 y C2 son:<br>
+    C1 * 1<sup>lg(9)</sup>+ C2 * 1<sup>lg(1)</sup> = 1<br>C1 * 2<sup>lg(9)</sup>+ C2 * 2<sup>lg(1)</sup> = 19<br><br>
+    C1 * 1 + C2 * 1 = 1<br>C1 * 9 + C2 * 1 = 19<br>
+    Calculando, queda así:
     <table border="1" width="200">
         <caption>Matriz para Gauss</caption>
         <tbody>
