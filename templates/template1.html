@@ -28,7 +28,8 @@
                 <td>({{A}}) </td>
             </tr>
         </tbody>
-    </table>Cambiando los subindices en función i, tenemos<br><br>
+    </table>
+    Cambiando los subindices en función i, tenemos<br><br>
     <table border="1" bordercolor="blue">
         <tbody>
             <tr>
@@ -48,19 +49,21 @@
                 <td>(-{{A}}) </td>
             </tr>
         </tbody>
-    </table>Sumando la ecuaciones se convierte en homogenea:<br><br>
+    </table>
+    Sumando la ecuaciones se convierte en homogenea:<br><br>
     <table border="1" bordercolor="blue">
         <tbody>
             <tr>
-                <td> F<sub>i</sub> </td>
-                <td>-{{A}} F<sub>i-1</sub> </td>
+                <td> 1*F<sub>i</sub> </td>
+                <td>-{{num1}} F<sub>i-1</sub> </td>
                 <td>{{B}} F<sub>i-2</sub> </td>
                 <td>= </td>
                 <td>0 </td>
             </tr>
         </tbody>
     </table>
-    Las dos raices son ({{raiz1}}, {{raiz2}}):<br>
+    Las dos raices son
+      <td>({{raiz1}}, {{raiz2}}):</td><br>
     La solución General es:<br>F(i)= C1 * {{raiz1}}<sup>i</sup> + C2 * {{raiz2}}<sup>i</sup><br>
     Reemplazando i por lg(n), tenemos:<br>
     <span style="color:blue;">F(n)= C1 * {{raiz1}}<sup>lg(n)</sup> + C2 * {{raiz2}}<sup>lg(n)</sup></span><br>
@@ -75,10 +78,10 @@
             </tr>
         </tbody>
     </table>
-    F(1) = 1<br>F(2) = 19<br>
+    F(1) = 1<br>F(2) = {{F2}}<br>
     Con lo cual las ecuaciones para calcular C1 y C2 son:<br>
-    C1 * 1<sup>lg(9)</sup>+ C2 * 1<sup>lg(1)</sup> = 1<br>C1 * 2<sup>lg(9)</sup>+ C2 * 2<sup>lg(1)</sup> = 19<br><br>
-    C1 * 1 + C2 * 1 = 1<br>C1 * 9 + C2 * 1 = 19<br>
+    C1 * 1<sup>lg({{B}})</sup>+ C2 * 1<sup>lg(1)</sup> = 1<br>C1 * 2<sup>lg({{B}})</sup>+ C2 * 2<sup>lg(1)</sup> = {{F2}}<br><br>
+    C1 * 1 + C2 * 1 = 1<br>C1 * {{B}} + C2 * 1 = {{F2}}<br>
     Calculando, queda así:
     <table border="1" width="200">
         <caption>Matriz para Gauss</caption>
@@ -89,11 +92,11 @@
                 <td>1</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td>{{B}}</td>
                 <td>1</td>
-                <td>19</td>
+                <td>{{F2}}</td>
             </tr>
         </tbody>
-    </table>Donde C1 y C2 tienen los siguientes valores:<br>C1=2.25<br>C2=-1.25<br>Con lo cual la solución es:<br>
-    <div style="width:500;border-color:black;color:blue;border-style:solid;border-width:2;">F(n)= 2.25 * n<sup>3.17</sup> -1.25 </div><br><br>
+    </table>Donde C1 y C2 tienen los siguientes valores:<br>C1={{c1}}<br>C2={{c2}}<br>Con lo cual la solución es:<br>
+    <div style="width:500;border-color:black;color:blue;border-style:solid;border-width:2;">F(n)= {{c1}} * n<sup>3.17</sup> {{c2}} </div><br><br>
 </div>
