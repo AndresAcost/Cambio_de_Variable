@@ -7,35 +7,47 @@ function convertirAregloATexto(arreglo) {
     texto += ' )'
 }
 
-function calcularFuncion(rutaPlantilla) {
+function calcularFuncion2(rutaPlantilla) {
         var A = document.getElementById('A').value
         var B = document.getElementById('B').value
         if (B <= 0) {
             window.alert("No se puede calcular B menor o igual cero")
         } else {
-          //Plantilla 1
-            var exp = Math.log(B) / Math.log(2);
-            var num1 = B * (-1) + (-1)
-            var coeficientesPolinomio = [1, num1, B]
-            var raices = Raices.calcular(coeficientesPolinomio)
-            var f2 = Number(A) + Number(B)
-            var arreglo1 = new Array
-            var arreglo2 = new Array
-            arreglo1 = [1, 1, 1]
-            arreglo2 = [B, 1, f2]
-            var ValorCoef = Coeficientes.calcular(arreglo1, arreglo2)
+          var divi= Math.pow(2,A)
+          var c=divi*B
+          var meB=B*(-1)
+          var d=meB+divi*(-1)
+          var d2=d*(-1)
+          console.log(d);
+          var coeficientesPolinomio = [1, d, c]
+          var raices = Raices.calcular(coeficientesPolinomio)
+          var exp1 = Math.log(raices[0]) / Math.log(2);
+          var exp2 = Math.log(raices[1]) / Math.log(2);
+          var arreglo1 = new Array
+          var arreglo2 = new Array
+          arreglo1 = [1, 1, 1]
+          arreglo2 = [raices[0], raices[1], d2]
+          console.log(arreglo2);
+          var ValorCoef = Coeficientes.calcular(arreglo1, arreglo2)
+
+
+
 
 
             var diccionario = {
                 'A': A,
                 'B': B,
-                'num1': num1,
-                'F2': f2,
+                'divi': divi,
+                'cB': c,
+                'd': d,
+                'd2':d2,
                 'raiz1': raices[0],
                 'raiz2': raices[1],
                 'c1': ValorCoef[0],
                 'c2': ValorCoef[1],
-                'exp': exp,
+                'exp1': exp1,
+                'exp2': exp2,
+
 
             }
 
