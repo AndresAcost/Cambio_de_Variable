@@ -1,6 +1,4 @@
 var Coeficientes = {
-
-
     calcular: function(a, b) {
         Coeficientes = new Array
         var coeficiente1 = ((b[2] * a[1]) - (b[1] * a[2])) / ((b[0] * a[1]) - (b[1] * a[0]))
@@ -9,6 +7,4 @@ var Coeficientes = {
         console.log(Coeficientes);
         return Coeficientes
     },
-
-
 }
